@@ -1,0 +1,35 @@
+Задание 1
+ids = {
+    'user1': [213, 213, 213, 15, 213],
+       'user2': [54, 54, 119, 119, 119],
+       'user3': [213, 98, 98, 35]
+}
+list_sum=sum(ids.values(), [])
+print (set(list_sum))
+
+#Задание 2
+queries = [
+    'смотреть сериалы онлайн',
+    'новости спорта',
+    'афиша кино',
+    'курс доллара',
+    'сериалы этим летом',
+    'курс по питону',
+    'сериалы про спорт',
+]
+
+words = {}
+
+for query in queries:
+    value = len(query.split())
+    words[value] = words.get(value, 0) + 1
+
+total_queries = len(queries)
+for key, value in sorted(words.items()):
+    percentage = (value / total_queries) * 100
+    print(f"Поисковых запросов, содержащих {key} слов(а): {percentage:.2f}%")
+
+
+
+
+  
